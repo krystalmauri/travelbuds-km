@@ -1,4 +1,7 @@
 # travelbuds-km
+
+This portion of Travel Buds shows the laws of each country 
+
 ![Simulator Screen Shot - iPhone 14 Pro - 2022-11-28 at 19 17 04](https://user-images.githubusercontent.com/24662191/204417800-16dd4817-8df6-4e54-9fa5-5bbbc5f85b35.png)
 ![Simulator Screen Shot - iPhone 14 Pro - 2022-11-28 at 19 04 52](https://user-images.githubusercontent.com/24662191/204417807-e9f853d7-85bc-44b8-bf3a-ef9521f07f58.png)
 ![Simulator Screen Shot - iPhone 14 Pro - 2022-11-28 at 19 02 23](https://user-images.githubusercontent.com/24662191/204417813-cdfdce66-8ffd-467f-ada3-1dcc7c0f914c.png)
