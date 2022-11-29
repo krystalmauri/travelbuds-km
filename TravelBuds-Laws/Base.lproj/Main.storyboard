@@ -1,24 +1,383 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f8Z-aL-XLm">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Travel Advisory View Controller-->
+        <scene sceneID="4AP-gz-H3O">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController storyboardIdentifier="TravelAdvisory" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="f8Z-aL-XLm" customClass="TravelAdvisoryViewController" customModule="TravelBuds" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IS8-zl-Dld">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="u82-8k-kXr">
+                                <rect key="frame" x="16" y="122" width="358" height="20"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0ME-Mm-Vuc"/>
+                                    <constraint firstAttribute="width" constant="358" id="unt-G7-YVi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick Facts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="76P-zJ-iuZ">
+                                <rect key="frame" x="16" y="150" width="358" height="33"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RkA-I7-Beq">
+                                <rect key="frame" x="199" y="191" width="1" height="195"/>
+                                <color key="backgroundColor" red="0.1450980392" green="0.58823529409999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="OOF-bd-Cu1"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nMN-hT-XJx">
+                                <rect key="frame" x="16" y="417" width="358" height="353"/>
+                                <color key="backgroundColor" red="0.043137254899999998" green="0.1764705882" blue="0.22352941179999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Hpv-SL-tQD">
+                                    <size key="itemSize" width="357" height="350"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="htmlcell" id="IqM-Cr-dyk" customClass="HTMLCollectionViewCell" customModule="TravelBuds" customModuleProvider="target">
+                                        <rect key="frame" x="0.66666666666666663" y="0.0" width="357" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="iJF-DU-rYF">
+                                            <rect key="frame" x="0.0" y="0.0" width="357" height="350"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q3G-SE-C0j">
+                                                    <rect key="frame" x="0.0" y="0.0" width="357" height="152"/>
+                                                    <color key="backgroundColor" red="0.015686274510000001" green="0.062745098040000002" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="20"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <wkWebView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wZA-GA-eto">
+                                                    <rect key="frame" x="-3" y="60" width="362" height="197"/>
+                                                    <color key="backgroundColor" red="0.027450980390000001" green="0.1176470588" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="362" id="fgc-Z0-wEU"/>
+                                                        <constraint firstAttribute="height" constant="197" id="rbA-M4-tEy"/>
+                                                    </constraints>
+                                                    <wkWebViewConfiguration key="configuration">
+                                                        <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
+                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                        <wkPreferences key="preferences" minimumFontSize="15"/>
+                                                    </wkWebViewConfiguration>
+                                                </wkWebView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="q3G-SE-C0j" firstAttribute="leading" secondItem="iJF-DU-rYF" secondAttribute="leading" id="0uy-Kf-bDP"/>
+                                                <constraint firstItem="q3G-SE-C0j" firstAttribute="top" secondItem="iJF-DU-rYF" secondAttribute="top" id="JJr-2w-tm8"/>
+                                                <constraint firstItem="wZA-GA-eto" firstAttribute="leading" secondItem="iJF-DU-rYF" secondAttribute="leading" id="Jxg-Bb-Hyk"/>
+                                                <constraint firstAttribute="trailing" secondItem="wZA-GA-eto" secondAttribute="trailing" constant="-5" id="Krl-JQ-vaK"/>
+                                                <constraint firstItem="wZA-GA-eto" firstAttribute="top" secondItem="q3G-SE-C0j" secondAttribute="bottom" constant="1" id="ONs-7Y-XSC"/>
+                                                <constraint firstAttribute="bottom" secondItem="wZA-GA-eto" secondAttribute="bottom" id="dfC-gx-pBE"/>
+                                                <constraint firstAttribute="trailing" secondItem="q3G-SE-C0j" secondAttribute="trailing" id="us6-OU-GAA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="357" height="350"/>
+                                        <connections>
+                                            <outlet property="cellLabel" destination="q3G-SE-C0j" id="Nnq-RW-x00"/>
+                                            <outlet property="htmlContent" destination="wZA-GA-eto" id="Mwn-Xb-GAs"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="f8Z-aL-XLm" id="0so-Ss-xn2"/>
+                                    <outlet property="delegate" destination="f8Z-aL-XLm" id="tUN-14-0Tf"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vital Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Eo-F8-SQY">
+                                <rect key="frame" x="16" y="385" width="173.66666666666666" height="32"/>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offical Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="MGL-g4-hx6">
+                                <rect key="frame" x="16" y="98.333333333333329" width="358" height="22.666666666666671"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="fnR-nd-r5i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="EIN-6s-lh5">
+                                <rect key="frame" x="16" y="191" width="175" height="195"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcp-vN-cpT">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="175" id="5pD-ln-kWh"/>
+                                            <constraint firstAttribute="height" constant="30" id="Lbs-W3-DWX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXJ-md-6mh">
+                                        <rect key="frame" x="0.0" y="33" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="tnr-68-6bV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mfx-nw-JbD">
+                                        <rect key="frame" x="0.0" y="66" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="HGT-NS-2tR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mz2-KN-RX5">
+                                        <rect key="frame" x="0.0" y="99" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Hi6-Ld-Fms"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mem-S3-azS">
+                                        <rect key="frame" x="0.0" y="132" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Y69-2k-z9j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P4l-3t-GkD">
+                                        <rect key="frame" x="0.0" y="165" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="UXh-Q9-2xv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ve9-SH-ton">
+                                <rect key="frame" x="208" y="191" width="175" height="195"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kdb-0y-7fF">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="175" id="IBE-kq-ELG"/>
+                                            <constraint firstAttribute="height" constant="30" id="ZYc-dg-ZNg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g6s-jT-YkS">
+                                        <rect key="frame" x="0.0" y="35" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ILF-0S-pUJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGm-7l-aJF">
+                                        <rect key="frame" x="0.0" y="70" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="MhQ-KX-r2l"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" showsExpansionTextWhenTruncated="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uz7-8c-oH7">
+                                        <rect key="frame" x="0.0" y="105" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6vN-Oo-EbC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ax-md-Eae">
+                                        <rect key="frame" x="0.0" y="140" width="175" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="XDH-a2-5ZR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MalayalamSangamMN-Bold" family="Malayalam Sangam MN" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZX-EO-P9D">
+                                        <rect key="frame" x="0.0" y="175" width="175" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="dr9-w8-Yje"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No quick facts have been found for this country." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-DC-gBZ">
+                                <rect key="frame" x="32" y="159" width="335" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="CyE-1d-hI0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="LaoSangamMN" family="Lao Sangam MN" pointSize="30"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="A93-RP-HqU">
+                                <rect key="frame" x="16" y="63" width="358" height="47.333333333333343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="358" id="oGi-dZ-CJk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MyanmarSangamMN" family="Myanmar Sangam MN" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oBz-FC-Lpe">
+                                <rect key="frame" x="0.0" y="770" width="390" height="49"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Q76-lW-CWX"/>
+                                    <barButtonItem title="World" image="globe" catalog="system" id="hST-GC-7Tm">
+                                        <connections>
+                                            <action selector="worldBtn:" destination="f8Z-aL-XLm" id="vU7-wU-EBs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="4bb-gt-D4A"/>
+                                    <barButtonItem title="Country" image="flag.2.crossed" catalog="system" id="gZT-ad-U8O">
+                                        <connections>
+                                            <action selector="returnToCountry:" destination="f8Z-aL-XLm" id="Vna-cQ-5YY"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8G9-FW-07z"/>
+                                    <barButtonItem title="City" image="location.fill" catalog="system" id="YvI-di-O93">
+                                        <connections>
+                                            <action selector="goToCityPage:" destination="f8Z-aL-XLm" id="xqv-ty-kQN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="C3y-Dk-gba"/>
+                                    <barButtonItem title="Item" image="line.3.horizontal" catalog="system" id="IoA-KU-45V">
+                                        <connections>
+                                            <action selector="goToUser:" destination="f8Z-aL-XLm" id="OJy-rf-1Mm"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </toolbar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXZ-OJ-fyq">
+                                <rect key="frame" x="16" y="93" width="358" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.52941176469999995" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="hUo-N6-K4F">
+                                <rect key="frame" x="16" y="414" width="358" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="dTf-7r-sMK"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.52941176469999995" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="k0v-At-Tt1"/>
+                        <color key="backgroundColor" red="0.015686274510000001" green="0.062745098040000002" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oBz-FC-Lpe" firstAttribute="trailing" secondItem="k0v-At-Tt1" secondAttribute="trailing" id="2xc-BI-Akq"/>
+                            <constraint firstAttribute="bottom" secondItem="RkA-I7-Beq" secondAttribute="bottom" constant="467" id="3DE-fN-6s4"/>
+                            <constraint firstItem="76P-zJ-iuZ" firstAttribute="top" secondItem="u82-8k-kXr" secondAttribute="bottom" constant="8.0000000000000284" id="4BC-Xu-FNM"/>
+                            <constraint firstItem="EIN-6s-lh5" firstAttribute="top" secondItem="76P-zJ-iuZ" secondAttribute="bottom" constant="8" symbolic="YES" id="4c0-u5-kIY"/>
+                            <constraint firstItem="oBz-FC-Lpe" firstAttribute="leading" secondItem="k0v-At-Tt1" secondAttribute="leading" id="6CQ-EK-3Va"/>
+                            <constraint firstItem="oBz-FC-Lpe" firstAttribute="bottom" secondItem="k0v-At-Tt1" secondAttribute="bottom" id="8cB-OT-mqI"/>
+                            <constraint firstItem="3Eo-F8-SQY" firstAttribute="top" secondItem="IS8-zl-Dld" secondAttribute="top" constant="385" id="9sT-Le-z8f"/>
+                            <constraint firstItem="u82-8k-kXr" firstAttribute="leading" secondItem="IS8-zl-Dld" secondAttribute="leadingMargin" id="BJy-EW-ZWZ"/>
+                            <constraint firstItem="nMN-hT-XJx" firstAttribute="top" secondItem="hUo-N6-K4F" secondAttribute="bottom" constant="2" id="C40-GP-tfj"/>
+                            <constraint firstItem="76P-zJ-iuZ" firstAttribute="leading" secondItem="EIN-6s-lh5" secondAttribute="leading" id="Cv2-e2-2Iv"/>
+                            <constraint firstItem="u82-8k-kXr" firstAttribute="trailing" secondItem="IS8-zl-Dld" secondAttribute="trailingMargin" id="E6L-EA-QTv"/>
+                            <constraint firstItem="RkA-I7-Beq" firstAttribute="leading" secondItem="EIN-6s-lh5" secondAttribute="trailing" constant="8" symbolic="YES" id="Ijw-wI-RgZ"/>
+                            <constraint firstItem="A93-RP-HqU" firstAttribute="top" secondItem="k0v-At-Tt1" secondAttribute="top" constant="4" id="J8F-0F-2aI"/>
+                            <constraint firstItem="zoO-DC-gBZ" firstAttribute="leading" secondItem="k0v-At-Tt1" secondAttribute="leading" constant="32" id="Pxb-RU-PMW"/>
+                            <constraint firstItem="RkA-I7-Beq" firstAttribute="centerY" secondItem="ve9-SH-ton" secondAttribute="centerY" id="SkT-S1-Vn8"/>
+                            <constraint firstItem="nMN-hT-XJx" firstAttribute="top" secondItem="3Eo-F8-SQY" secondAttribute="bottom" id="Sr0-oD-GxH"/>
+                            <constraint firstItem="zoO-DC-gBZ" firstAttribute="top" secondItem="u82-8k-kXr" secondAttribute="bottom" constant="17" id="Tyh-VK-Vi9"/>
+                            <constraint firstItem="nMN-hT-XJx" firstAttribute="leading" secondItem="k0v-At-Tt1" secondAttribute="leading" constant="16" id="YMH-s7-ypj"/>
+                            <constraint firstItem="A93-RP-HqU" firstAttribute="leading" secondItem="k0v-At-Tt1" secondAttribute="leading" constant="16" id="bba-WN-Z8A"/>
+                            <constraint firstItem="3Eo-F8-SQY" firstAttribute="leading" secondItem="nMN-hT-XJx" secondAttribute="leading" id="ct4-Bx-iAc"/>
+                            <constraint firstItem="k0v-At-Tt1" firstAttribute="trailing" secondItem="nMN-hT-XJx" secondAttribute="trailing" constant="16" id="iXz-A0-VS5"/>
+                            <constraint firstItem="u82-8k-kXr" firstAttribute="top" secondItem="MGL-g4-hx6" secondAttribute="bottom" constant="1" id="ihm-Bh-diS"/>
+                            <constraint firstItem="3Eo-F8-SQY" firstAttribute="leading" secondItem="A93-RP-HqU" secondAttribute="leading" id="ipK-ju-qSc"/>
+                            <constraint firstItem="k0v-At-Tt1" firstAttribute="trailing" secondItem="zoO-DC-gBZ" secondAttribute="trailing" constant="23" id="mTq-x4-1SJ"/>
+                            <constraint firstItem="76P-zJ-iuZ" firstAttribute="trailing" secondItem="u82-8k-kXr" secondAttribute="trailing" id="nLt-mo-Mcy"/>
+                            <constraint firstItem="MGL-g4-hx6" firstAttribute="leading" secondItem="k0v-At-Tt1" secondAttribute="leading" constant="16" id="rMc-pW-vFC"/>
+                            <constraint firstItem="ve9-SH-ton" firstAttribute="leading" secondItem="RkA-I7-Beq" secondAttribute="trailing" constant="8" symbolic="YES" id="rUC-4E-B8A"/>
+                            <constraint firstItem="3Eo-F8-SQY" firstAttribute="leading" secondItem="76P-zJ-iuZ" secondAttribute="leading" id="rin-dh-avj"/>
+                            <constraint firstItem="k0v-At-Tt1" firstAttribute="bottom" secondItem="nMN-hT-XJx" secondAttribute="bottom" constant="49" id="sWj-ae-Sfq"/>
+                            <constraint firstItem="RkA-I7-Beq" firstAttribute="top" secondItem="IS8-zl-Dld" secondAttribute="top" constant="191" id="vPN-Y0-cDd"/>
+                            <constraint firstItem="3Eo-F8-SQY" firstAttribute="leading" secondItem="MGL-g4-hx6" secondAttribute="leading" id="vaV-b1-T7s"/>
+                            <constraint firstItem="RkA-I7-Beq" firstAttribute="top" secondItem="ve9-SH-ton" secondAttribute="top" id="xYL-tn-nfy"/>
+                            <constraint firstItem="3Eo-F8-SQY" firstAttribute="leading" secondItem="u82-8k-kXr" secondAttribute="leading" id="yuR-xM-Fdk"/>
+                            <constraint firstItem="RkA-I7-Beq" firstAttribute="top" secondItem="76P-zJ-iuZ" secondAttribute="bottom" constant="8" symbolic="YES" id="zNC-EB-Cu6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blankPassport" destination="Mfx-nw-JbD" id="Ftc-DT-Vpp"/>
+                        <outlet property="blankPassportDesc" destination="mz2-KN-RX5" id="KgC-T1-9ow"/>
+                        <outlet property="countryLabel" destination="A93-RP-HqU" id="atU-yc-QK8"/>
+                        <outlet property="countryNameLbl" destination="A93-RP-HqU" id="WqO-Lg-eay"/>
+                        <outlet property="currencyEntryDesc" destination="uz7-8c-oH7" id="a0d-0W-F0X"/>
+                        <outlet property="currencyEntryLbl" destination="PGm-7l-aJF" id="2cF-9y-hSP"/>
+                        <outlet property="currencyExitDesc" destination="vZX-EO-P9D" id="CIj-e3-LHx"/>
+                        <outlet property="currencyExitLbl" destination="1ax-md-Eae" id="nIb-Za-xlB"/>
+                        <outlet property="htmlCollectionView" destination="nMN-hT-XJx" id="sg1-hr-vWL"/>
+                        <outlet property="infoLabel" destination="3Eo-F8-SQY" id="7fb-GD-QaZ"/>
+                        <outlet property="leftStackView" destination="EIN-6s-lh5" id="xng-q3-Sw2"/>
+                        <outlet property="noQuickFacts" destination="zoO-DC-gBZ" id="SDm-AT-lOU"/>
+                        <outlet property="officialcountryLbl" destination="MGL-g4-hx6" id="l8y-2t-HUv"/>
+                        <outlet property="passportDesc" destination="yXJ-md-6mh" id="1rD-Eg-Su5"/>
+                        <outlet property="passportlbl" destination="tcp-vN-cpT" id="PNz-ZR-9C6"/>
+                        <outlet property="quickFactsDivider" destination="RkA-I7-Beq" id="lik-8v-Hgj"/>
+                        <outlet property="rightStackView" destination="ve9-SH-ton" id="Rda-zb-H9b"/>
+                        <outlet property="touristVisa" destination="Mem-S3-azS" id="YCo-Nl-fh4"/>
+                        <outlet property="touristVisaDesc" destination="P4l-3t-GkD" id="G6K-fC-6bu"/>
+                        <outlet property="travelAdvisoryLvl" destination="u82-8k-kXr" id="uoe-sQ-fgk"/>
+                        <outlet property="vaccinationsDesc" destination="g6s-jT-YkS" id="hPD-24-AEy"/>
+                        <outlet property="vaccinationsLbl" destination="Kdb-0y-7fF" id="Qz4-37-vO1"/>
+                        <outlet property="vitalInfoDivider" destination="hUo-N6-K4F" id="pJa-2P-Z0Y"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ebc-gu-6oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="982" y="4"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flag.2.crossed" catalog="system" width="128" height="72"/>
+        <image name="globe" catalog="system" width="128" height="123"/>
+        <image name="line.3.horizontal" catalog="system" width="128" height="65"/>
+        <image name="location.fill" catalog="system" width="128" height="119"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

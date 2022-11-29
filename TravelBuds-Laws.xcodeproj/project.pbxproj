@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		FDAEC0572935422A004AF490 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAEC0562935422A004AF490 /* AppDelegate.swift */; };
 		FDAEC0592935422A004AF490 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAEC0582935422A004AF490 /* SceneDelegate.swift */; };
-		FDAEC05B2935422A004AF490 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAEC05A2935422A004AF490 /* ViewController.swift */; };
+		FDAEC05B2935422A004AF490 /* TravelAdvisoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAEC05A2935422A004AF490 /* TravelAdvisoryViewController.swift */; };
 		FDAEC05E2935422A004AF490 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAEC05C2935422A004AF490 /* Main.storyboard */; };
 		FDAEC0602935422F004AF490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDAEC05F2935422F004AF490 /* Assets.xcassets */; };
 		FDAEC0632935422F004AF490 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAEC0612935422F004AF490 /* LaunchScreen.storyboard */; };
 		FDAEC06E29354230004AF490 /* TravelBuds_LawsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAEC06D29354230004AF490 /* TravelBuds_LawsTests.swift */; };
 		FDAEC07829354230004AF490 /* TravelBuds_LawsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAEC07729354230004AF490 /* TravelBuds_LawsUITests.swift */; };
 		FDAEC07A29354230004AF490 /* TravelBuds_LawsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAEC07929354230004AF490 /* TravelBuds_LawsUITestsLaunchTests.swift */; };
+		FDDB47F52935629E00D190C9 /* TravelAdvisoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB47F42935629E00D190C9 /* TravelAdvisoryModel.swift */; };
+		FDDB47F7293562EB00D190C9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB47F6293562EB00D190C9 /* API.swift */; };
+		FDDB47F92935630900D190C9 /* InputVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB47F82935630900D190C9 /* InputVariables.swift */; };
+		FDDB47FB2935772700D190C9 /* HTMLCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDB47FA2935772700D190C9 /* HTMLCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +43,7 @@
 		FDAEC0532935422A004AF490 /* TravelBuds-Laws.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TravelBuds-Laws.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAEC0562935422A004AF490 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDAEC0582935422A004AF490 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDAEC05A2935422A004AF490 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDAEC05A2935422A004AF490 /* TravelAdvisoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAdvisoryViewController.swift; sourceTree = "<group>"; };
 		FDAEC05D2935422A004AF490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDAEC05F2935422F004AF490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDAEC0622935422F004AF490 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +53,10 @@
 		FDAEC07329354230004AF490 /* TravelBuds-LawsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TravelBuds-LawsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDAEC07729354230004AF490 /* TravelBuds_LawsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBuds_LawsUITests.swift; sourceTree = "<group>"; };
 		FDAEC07929354230004AF490 /* TravelBuds_LawsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelBuds_LawsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FDDB47F42935629E00D190C9 /* TravelAdvisoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelAdvisoryModel.swift; sourceTree = "<group>"; };
+		FDDB47F6293562EB00D190C9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		FDDB47F82935630900D190C9 /* InputVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputVariables.swift; sourceTree = "<group>"; };
+		FDDB47FA2935772700D190C9 /* HTMLCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +109,15 @@
 			children = (
 				FDAEC0562935422A004AF490 /* AppDelegate.swift */,
 				FDAEC0582935422A004AF490 /* SceneDelegate.swift */,
-				FDAEC05A2935422A004AF490 /* ViewController.swift */,
+				FDAEC05A2935422A004AF490 /* TravelAdvisoryViewController.swift */,
 				FDAEC05C2935422A004AF490 /* Main.storyboard */,
 				FDAEC05F2935422F004AF490 /* Assets.xcassets */,
 				FDAEC0612935422F004AF490 /* LaunchScreen.storyboard */,
 				FDAEC0642935422F004AF490 /* Info.plist */,
+				FDDB47F42935629E00D190C9 /* TravelAdvisoryModel.swift */,
+				FDDB47F6293562EB00D190C9 /* API.swift */,
+				FDDB47F82935630900D190C9 /* InputVariables.swift */,
+				FDDB47FA2935772700D190C9 /* HTMLCollectionViewCell.swift */,
 			);
 			path = "TravelBuds-Laws";
 			sourceTree = "<group>";
@@ -258,9 +270,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDAEC05B2935422A004AF490 /* ViewController.swift in Sources */,
+				FDDB47F52935629E00D190C9 /* TravelAdvisoryModel.swift in Sources */,
+				FDAEC05B2935422A004AF490 /* TravelAdvisoryViewController.swift in Sources */,
 				FDAEC0572935422A004AF490 /* AppDelegate.swift in Sources */,
 				FDAEC0592935422A004AF490 /* SceneDelegate.swift in Sources */,
+				FDDB47F92935630900D190C9 /* InputVariables.swift in Sources */,
+				FDDB47F7293562EB00D190C9 /* API.swift in Sources */,
+				FDDB47FB2935772700D190C9 /* HTMLCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
